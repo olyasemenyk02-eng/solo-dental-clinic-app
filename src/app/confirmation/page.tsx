@@ -7,8 +7,8 @@ import { getServiceById, getDoctorById, formatDate, formatTime } from "@/lib/dat
 
 function ConfirmationContent() {
   const searchParams = useSearchParams();
-  const reactId = useId();
-  const confirmationId = `BS-${reactId.replace(/:/g, "").toUpperCase()}`;
+  const uniqueId = useId();
+  const confirmationId = `BS-${uniqueId.replace(/:/g, "").toUpperCase()}`;
 
   const serviceId = searchParams.get("service");
   const doctorId = searchParams.get("doctor");

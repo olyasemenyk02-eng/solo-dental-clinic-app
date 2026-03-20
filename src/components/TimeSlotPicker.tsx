@@ -1,4 +1,4 @@
-import { formatTime } from "@/lib/data";
+import { formatTime, generateTimeSlots } from "@/lib/data";
 
 interface TimeSlotPickerProps {
   date: string;
@@ -6,17 +6,6 @@ interface TimeSlotPickerProps {
   onDateChange: (date: string) => void;
   onTimeSelect: (time: string) => void;
   availableDays: number[];
-}
-
-function generateTimeSlots(): string[] {
-  const slots: string[] = [];
-  for (let hour = 9; hour < 17; hour++) {
-    slots.push(`${hour.toString().padStart(2, "0")}:00`);
-    if (hour < 16) {
-      slots.push(`${hour.toString().padStart(2, "0")}:30`);
-    }
-  }
-  return slots;
 }
 
 function getNextAvailableDates(
