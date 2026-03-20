@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "name": "SmileCare Dental",
+    "slug": "solo-dental-clinic-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1A56A4"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.smilecare.dental",
+      "infoPlist": {
+        "NSCalendarsUsageDescription": "Used to add your appointment to your calendar",
+        "NSRemindersUsageDescription": "Used to set reminders for your appointments"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1A56A4"
+      },
+      "package": "com.smilecare.dental",
+      "softwareKeyboardLayoutMode": "pan"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#1A56A4"
+        }
+      ]
+    ],
+    "scheme": "smilecare",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "solo-dental-clinic-app"
+      }
+    }
+  }
+}
